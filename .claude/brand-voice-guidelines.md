@@ -1,4 +1,16 @@
-# Kellogg Insurance Marketing Events: Brand Voice Guidelines
+# Kellogg Insurance Marketing Events: Brand Voice Guidelines (draft v1)
+
+**Status: DRAFT. Pending compliance review.** Do not treat as approved until compliance signs off and this line is changed.
+
+## Change Log
+
+Add a new row for every change, newest first. Update the version number in the title and in the metadata below when you do. Keep the Claude project copy and the repository copy (`.claude/brand-voice-guidelines.md`) in step.
+
+| Date | Version | Changed by | What changed | Approved by |
+| --- | --- | --- | --- | --- |
+| 2026-10-16 | 1 (draft) | Claude, for Celia | First draft from the business profile, the events brief, the Agent Portal screenshot and the Live Events page | Pending compliance review |
+
+---
 
 ## Generation Metadata
 - Created: 2026-10-16
