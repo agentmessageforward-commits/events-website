@@ -1,0 +1,243 @@
+{
+  "_readme": "Every event on the site renders from this file. Edit or add events here with no code changes. Event titles and categories were carried over from the Kellogg Live Events page (sample content). Dates, times, locations, costs, hosts, summaries and registration links are NOT confirmed, so every entry is a PLACEHOLDER. Set placeholder to false only when every field is confirmed. ceCredit stays false unless CE credit is confirmed in writing. Types: weekly-online, live-training, business-summit. summary should state a practical takeaway in one sentence (for example: Leave with a checklist for [topic]), never an earnings or results promise. replay: true, false, or null (unconfirmed).",
+  "events": [
+    {
+      "placeholder": true,
+      "title": "2027 product overview",
+      "type": "weekly-online",
+      "summary": "[Outcome in one sentence: what agents can do after this session, for example 'Leave with a checklist for [topic]'.]",
+      "startDateTime": "2030-01-01T10:00:00-07:00",
+      "endDateTime": "2030-01-01T11:00:00-07:00",
+      "timeZone": "America/Denver",
+      "format": "online",
+      "location": "[Join link or room]",
+      "registrationUrl": "[REGISTRATION LINK]",
+      "ceCredit": false,
+      "cost": "[COST]",
+      "hosts": [
+        "[NAME], [TITLE]"
+      ],
+      "image": "nextup",
+      "replay": null
+    },
+    {
+      "placeholder": true,
+      "title": "Carrier writing walkthrough",
+      "type": "live-training",
+      "summary": "[Outcome in one sentence.]",
+      "startDateTime": "2030-01-08T10:00:00-07:00",
+      "endDateTime": "2030-01-08T11:30:00-07:00",
+      "timeZone": "America/Denver",
+      "format": "online",
+      "location": "[Join link or room]",
+      "registrationUrl": "[REGISTRATION LINK]",
+      "ceCredit": false,
+      "cost": "[COST]",
+      "hosts": [
+        "[NAME], [TITLE]"
+      ],
+      "image": "nextup",
+      "replay": null
+    },
+    {
+      "placeholder": true,
+      "title": "Retail kiosk request walkthrough",
+      "type": "live-training",
+      "summary": "[Outcome in one sentence.]",
+      "startDateTime": "2030-01-15T10:00:00-07:00",
+      "endDateTime": "2030-01-15T10:45:00-07:00",
+      "timeZone": "America/Denver",
+      "format": "online",
+      "location": "[Join link or room]",
+      "registrationUrl": "[REGISTRATION LINK]",
+      "ceCredit": false,
+      "cost": "[COST]",
+      "hosts": [
+        "[NAME], [TITLE]"
+      ],
+      "image": "nextup",
+      "replay": null
+    },
+    {
+      "placeholder": true,
+      "title": "DEET research webinar",
+      "type": "weekly-online",
+      "summary": "[Outcome in one sentence.]",
+      "startDateTime": "2030-01-22T10:00:00-07:00",
+      "endDateTime": "2030-01-22T11:00:00-07:00",
+      "timeZone": "America/Denver",
+      "format": "online",
+      "location": "[Join link or room]",
+      "registrationUrl": "[REGISTRATION LINK]",
+      "ceCredit": false,
+      "cost": "[COST]",
+      "hosts": [
+        "[NAME], [TITLE]"
+      ],
+      "image": "nextup",
+      "replay": null
+    },
+    {
+      "placeholder": true,
+      "title": "Marketing material approvals: what to submit",
+      "type": "weekly-online",
+      "summary": "[Outcome in one sentence.]",
+      "startDateTime": "2030-01-29T10:00:00-07:00",
+      "endDateTime": "2030-01-29T11:00:00-07:00",
+      "timeZone": "America/Denver",
+      "format": "online",
+      "location": "[Join link or room]",
+      "registrationUrl": "[REGISTRATION LINK]",
+      "ceCredit": false,
+      "cost": "[COST]",
+      "hosts": [
+        "[NAME], [TITLE]"
+      ],
+      "image": "nextup",
+      "replay": null
+    },
+    {
+      "placeholder": true,
+      "title": "Year-end updates",
+      "type": "weekly-online",
+      "summary": "[Outcome in one sentence.]",
+      "startDateTime": "2030-02-05T10:00:00-07:00",
+      "endDateTime": "2030-02-05T11:00:00-07:00",
+      "timeZone": "America/Denver",
+      "format": "online",
+      "location": "[Join link or room]",
+      "registrationUrl": "[REGISTRATION LINK]",
+      "ceCredit": false,
+      "cost": "[COST]",
+      "hosts": [
+        "[NAME], [TITLE]"
+      ],
+      "image": "nextup",
+      "replay": null
+    },
+    {
+      "placeholder": true,
+      "title": "2027 Leadership Summit",
+      "type": "business-summit",
+      "summary": "[Outcome in one sentence.]",
+      "startDateTime": "2030-03-01T08:00:00-07:00",
+      "endDateTime": "2030-03-01T17:00:00-07:00",
+      "timeZone": "America/Denver",
+      "format": "in person",
+      "location": "[LOCATION]",
+      "registrationUrl": "[REGISTRATION LINK]",
+      "ceCredit": false,
+      "cost": "[COST]",
+      "hosts": [
+        "[NAME], [TITLE]"
+      ],
+      "image": "nextup",
+      "replay": null
+    }
+  ],
+  "hosts": [
+    {
+      "name": "[NAME]",
+      "title": "[TITLE]",
+      "topic": "[One line on what this person teaches or hosts]"
+    },
+    {
+      "name": "[NAME]",
+      "title": "[TITLE]",
+      "topic": "[One line on what this person teaches or hosts]"
+    },
+    {
+      "name": "[NAME]",
+      "title": "[TITLE]",
+      "topic": "[One line on what this person teaches or hosts]"
+    }
+  ],
+  "_hostsNote": "hosts at the top level feed the 'Who you will learn with' strip. Use real names, titles and photo files only with permission. Leave photo empty to show a neutral placeholder.",
+  "summit": {
+    "_note": "Everything here is a placeholder. Add or remove days and sessions freely, and confirm the number of days. Set placeholder to false only when all details are confirmed. ceCredit stays false unless CE credit is confirmed in writing.",
+    "placeholder": true,
+    "title": "Kellogg Business Summit",
+    "purpose": "[One sentence on why agents attend the Summit.]",
+    "dates": "[DATES]",
+    "venue": "[CITY, VENUE]",
+    "audience": "Independent agents, prospective agents, and FMO and MGA partners (field marketing organizations and managing general agencies). [CONFIRM who may attend]",
+    "cost": "[COST]",
+    "registrationUrl": "[REGISTRATION LINK]",
+    "ceCredit": false,
+    "days": [
+      {
+        "label": "Day 1",
+        "date": "[DATE]",
+        "sessions": [
+          {
+            "time": "[TIME]",
+            "title": "[Session title]",
+            "type": "[Keynote, breakout or networking]"
+          },
+          {
+            "time": "[TIME]",
+            "title": "[Session title]",
+            "type": "[Keynote, breakout or networking]"
+          },
+          {
+            "time": "[TIME]",
+            "title": "[Session title]",
+            "type": "[Keynote, breakout or networking]"
+          }
+        ]
+      },
+      {
+        "label": "Day 2",
+        "date": "[DATE]",
+        "sessions": [
+          {
+            "time": "[TIME]",
+            "title": "[Session title]",
+            "type": "[Keynote, breakout or networking]"
+          },
+          {
+            "time": "[TIME]",
+            "title": "[Session title]",
+            "type": "[Keynote, breakout or networking]"
+          },
+          {
+            "time": "[TIME]",
+            "title": "[Session title]",
+            "type": "[Keynote, breakout or networking]"
+          }
+        ]
+      }
+    ]
+  },
+  "speakersCall": {
+    "_note": "Placeholder copy. Describe the real process for proposing a session or partnering once confirmed. Do not promise payment, income or attendance numbers.",
+    "title": "Speak or partner with us",
+    "body": "[ANSWER: who Kellogg wants to hear from and how to propose a session or topic.]",
+    "ctaLabel": "Propose a session",
+    "ctaUrl": "[SPEAKER FORM LINK]",
+    "partnerTitle": "For FMO and MGA partners",
+    "partnerBody": "[ANSWER: how field marketing organizations and managing general agencies can partner on events. Contact details to confirm.]"
+  },
+  "faq": [
+    {
+      "q": "How much do events cost?",
+      "a": "[ANSWER: cost for weekly online events, live trainings, WebCE courses and the Business Summit.]"
+    },
+    {
+      "q": "What if I need to cancel?",
+      "a": "[ANSWER: cancellation and refund policy.]"
+    },
+    {
+      "q": "Who can take a WebCE course?",
+      "a": "WebCE courses are discounted and open to everyone. [CONFIRM how to enroll and any limits.]"
+    },
+    {
+      "q": "How do I join a live online session?",
+      "a": "[ANSWER: how registered agents receive the join link and how early to log in.]"
+    },
+    {
+      "q": "Will I be able to watch a session later?",
+      "a": "[ANSWER: which sessions have replays and where to find them.]"
+    }
+  ]
+}

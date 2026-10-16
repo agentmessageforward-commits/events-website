@@ -1,0 +1,589 @@
+<title>Kellogg Events</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Weekly online events, live and recorded trainings, WebCE courses and the annual Kellogg Business Summit, for independent agents.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Layout: full-bleed photo hero that pins and shrinks into a framed window as you scroll, then an editorial "Next up" spread (copy left, photo right) on warm white. Single light look by choice. */
+#kim-events{
+  /* [HEX] placeholders until Kellogg supplies exact brand values */
+  --paper:#faf8f4; --mist:#eceef1; --ink:#1b2230; --muted:#566070; --rule:#d9dce2;
+  --navy:#14284b; --sky:#9dbee3; --on-navy:#f4f7fb; --gold:#a18a58; --gold-ink:#7a6230;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:max(20px,env(safe-area-inset-left,0px));
+  background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);color-scheme:light;
+}
+#kim-events *{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{background:#faf8f4}
+#kim-events a{color:inherit}
+#kim-events .k-btn,#kim-events .k-tbtn{color:var(--on-navy)}
+#kim-events .k-link{color:var(--navy)}
+#kim-events .k-link[aria-disabled="true"]{color:var(--muted)}
+#kim-events :focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:2px}
+#kim-events ::selection{background:var(--navy);color:var(--on-navy)}
+.k-wrap{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* Header */
+.k-head{position:absolute;z-index:5;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:max(22px,env(safe-area-inset-top,0px));color:#fff}
+.k-mark{position:relative;display:block;width:clamp(150px,17vw,220px);text-decoration:none}
+.k-logo{display:block;width:100%;height:auto}
+.k-logo-c{opacity:0}
+.k-logo-w{position:absolute;inset:0;filter:brightness(0) invert(1)}
+.k-head nav a{font-weight:500;font-size:.95rem;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* Hero */
+.k-hero{position:relative;height:min(92svh,900px);min-height:560px;overflow:hidden;background:var(--paper)}
+.k-frame{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 0 0 0 round 0);will-change:clip-path}
+.k-zoomer{position:absolute;inset:-4%;will-change:transform}
+.k-art{position:absolute;inset:0;background:var(--g,#14284b);}
+.k-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--focal,50% 50%)}
+@keyframes k-slow{from{transform:scale(1)}to{transform:scale(1.07)}}
+.k-art.is-fallback::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 55% at 78% 30%,rgba(157,190,227,.35),transparent 70%),
+  radial-gradient(45% 50% at 18% 85%,rgba(255,255,255,.08),transparent 70%)}
+.k-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,27,54,.72) 0%,rgba(13,27,54,.38) 55%,rgba(13,27,54,.12) 100%),linear-gradient(0deg,rgba(13,27,54,.55),transparent 45%)}
+.k-copy{position:absolute;z-index:3;left:0;right:0;bottom:0;padding-bottom:max(56px,calc(env(safe-area-inset-bottom,0px) + 40px));color:#fff;display:grid;gap:28px;max-width:1240px;margin:0 auto;width:100%}
+.k-h1{font:400 clamp(2.8rem,8.2vw,6rem)/1 var(--serif);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.k-line{display:block;overflow:hidden;padding-bottom:.08em}
+.k-line>span{display:block}
+.k-sub{max-width:44ch;margin:0;font-size:1.1rem;color:#e7edf6}
+.k-cue{display:inline-flex;align-items:center;gap:14px;width:max-content;font-weight:500;font-size:.95rem;text-decoration:none}
+.k-cue i{display:block;width:1px;height:44px;background:rgba(255,255,255,.35);position:relative;overflow:hidden}
+.k-cue i::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:#fff;animation:k-drip 2.2s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes k-drip{to{top:110%}}
+
+/* Next up */
+.k-next{padding-block:clamp(72px,12vw,160px)}
+.k-next-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,6vw,96px);align-items:center}
+.k-label{font:600 .9rem var(--sans);color:var(--navy);display:flex;align-items:center;gap:12px;margin:0 0 20px}
+.k-label::before{content:"";width:36px;height:2px;background:var(--gold)}
+.k-label .k-ico{width:28px;height:28px}
+.k-chip{display:inline-block;font:500 .8rem var(--sans);background:var(--mist);color:var(--muted);padding:3px 10px;border-radius:99px;margin-left:8px}
+.k-next h2{font:400 clamp(2.1rem,5vw,3.6rem)/1.05 var(--serif);letter-spacing:-.015em;margin:0 0 20px;text-wrap:balance}
+.k-summary{font:400 1.25rem/1.5 var(--serif);color:var(--muted);margin:0 0 32px;max-width:40ch}
+.k-facts{display:grid;gap:0;margin:0 0 36px;border-top:3px solid var(--gold)}
+.k-facts div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.k-facts dt{font-weight:600;font-size:.85rem;color:var(--muted);padding-top:2px}
+.k-facts dd{margin:0;font-variant-numeric:tabular-nums}
+.k-facts dd small{display:block;color:var(--muted);font-size:.9rem}
+.k-actions{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.k-btn{display:inline-flex;align-items:center;justify-content:center;font:600 1rem var(--sans);background:var(--navy);color:var(--on-navy);padding:15px 28px;border-radius:2px;border:1.5px solid var(--navy);text-decoration:none;cursor:pointer;min-height:48px}
+.k-btn:hover{background:#0d1b36;border-color:#0d1b36}
+.k-link{font:500 .95rem var(--sans);color:var(--navy);text-decoration:underline;text-underline-offset:4px;background:none;border:0;padding:6px 0;cursor:pointer}
+.k-link[aria-disabled="true"]{color:var(--muted);text-decoration-style:dotted;cursor:not-allowed}
+.k-note{margin:16px 0 0;font-size:.9rem;color:var(--muted);min-height:1.4em}
+.k-note:not(:empty),.k-tnote:not(:empty){background:var(--mist);color:var(--ink);padding:10px 14px;border-radius:2px;font-size:.9rem}
+.k-tnote{margin:0 0 0 52px}
+.k-tnote:empty{display:none}
+.k-photo{position:relative;aspect-ratio:4/3;background:var(--g,#2c4f82);overflow:hidden;clip-path:inset(0 0 0 0 round 2px)}
+.k-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--focal,50% 50%)}
+.k-photo.is-fallback::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 50% at 70% 20%,rgba(255,255,255,.35),transparent 70%)}
+.k-also{padding-bottom:clamp(72px,10vw,140px)}
+.k-also-inner{max-width:1240px;margin:0 auto;border-top:1px solid var(--rule);padding-top:40px;display:grid;gap:28px}
+.k-also h2{font:400 clamp(1.7rem,3vw,2.2rem)/1.1 var(--serif);margin:0;letter-spacing:-.01em}
+.k-also p.k-lead{margin:8px 0 0;color:var(--muted);font-size:.95rem;max-width:48ch}
+.k-tiles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:28px}
+.k-tile{background:#fff;border-top:5px solid var(--gold);border-radius:3px;padding:20px 22px 18px;box-shadow:0 10px 18px -8px rgba(20,40,75,.22);display:grid;gap:14px;align-content:start}
+.k-th{display:grid;grid-template-columns:36px minmax(0,1fr);gap:16px;align-items:center}
+.k-ico{width:36px;height:36px;display:block}
+.k-ico *{stroke:var(--navy);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.k-ico .g{stroke:var(--gold);fill:none}
+.k-ico .gf{stroke:var(--gold);fill:var(--gold)}
+.k-tile h3{font:400 1.3rem/1.25 var(--serif);margin:0;text-wrap:balance}
+.k-tmeta{display:grid;padding-left:52px;color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.k-tmeta b{color:var(--ink);font-weight:600}
+.k-tfoot{padding-left:52px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between}
+.k-ttype{font-size:.85rem;font-weight:600;color:var(--gold-ink)}
+.k-tbtn{font:600 .9rem var(--sans);padding:9px 16px;border:1.5px solid var(--navy);background:var(--navy);color:var(--on-navy);border-radius:2px;cursor:pointer;min-height:40px;text-decoration:none;display:inline-flex;align-items:center}
+.k-tbtn:hover{background:#0d1b36}
+.k-nlabel{display:flex;align-items:center;gap:12px}
+.k-nlabel .k-ico{width:30px;height:30px}
+.k-filters{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+.k-fgroup{display:flex;flex-wrap:wrap;gap:8px}
+.k-chip{font:500 .9rem var(--sans);padding:8px 16px;border-radius:999px;border:1.5px solid var(--rule);background:#fff;color:var(--ink);cursor:pointer;min-height:40px}
+.k-chip:hover{border-color:var(--gold)}
+.k-chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+.k-count{margin:0 0 0 auto;font-size:.9rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.k-empty{grid-column:1/-1;padding:32px;border:1.5px dashed var(--rule);border-radius:3px;color:var(--muted);background:#fff}
+.k-strip{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;align-items:center;max-width:720px;background:rgba(10,22,44,.84);border-top:3px solid var(--gold);padding:16px 20px;border-radius:2px;color:#fff}
+.k-st-label{grid-column:1/-1;font:600 .85rem var(--sans);color:#dcc888}
+.k-st-title{margin:0;font:400 1.4rem/1.2 var(--serif);text-wrap:balance}
+.k-st-when{margin:2px 0 0;font-size:.95rem;color:#e7edf6;font-variant-numeric:tabular-nums}
+.k-st-note{grid-column:1/-1;margin:4px 0 0;font-size:.9rem;color:#fff;background:rgba(255,255,255,.12);padding:8px 12px;border-radius:2px}
+.k-st-note:empty{display:none}
+#kim-events .k-strip .k-btn{background:#fff;color:var(--navy);border-color:#fff}
+#kim-events .k-strip .k-btn:hover{background:var(--mist)}
+.k-sec{padding-bottom:clamp(64px,9vw,120px)}
+.k-sec-inner{max-width:1240px;margin:0 auto;border-top:1px solid var(--rule);padding-top:40px;display:grid;gap:28px}
+.k-sec h2{font:400 clamp(1.7rem,3vw,2.2rem)/1.1 var(--serif);margin:0;letter-spacing:-.01em}
+.k-lead2{margin:0;max-width:56ch;font:400 1.2rem/1.5 var(--serif);color:var(--muted)}
+.k-hosts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:32px}
+.k-host{display:grid;gap:6px;justify-items:start}
+.k-avatar{width:96px;height:96px;border-radius:50%;background:var(--mist);display:grid;place-items:center;margin-bottom:8px;overflow:hidden}
+.k-avatar svg{width:56px;height:56px}
+.k-avatar svg *{fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.k-avatar img{width:100%;height:100%;object-fit:cover}
+.k-host b{font:500 1.25rem/1.2 var(--serif)}
+.k-host .t{font-size:.9rem;color:var(--gold-ink);font-weight:600}
+.k-host p{margin:4px 0 0;font-size:.95rem;color:var(--muted);max-width:30ch}
+.k-why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.k-why>div{border-top:2px solid var(--gold);padding-top:16px}
+.k-why h3{font:400 1.5rem/1.2 var(--serif);margin:0 0 8px}
+.k-why p{margin:0;color:var(--muted);max-width:34ch}
+.k-family h2{font:400 clamp(1.9rem,4.6vw,3.4rem)/1.05 var(--serif);letter-spacing:-.015em;max-width:20ch;text-wrap:balance}
+.k-family p{margin:0;max-width:52ch;font:400 1.2rem/1.5 var(--serif);color:var(--muted)}
+.k-family{border-top:3px solid var(--gold)}
+@media (prefers-reduced-motion:no-preference){
+  .k-chip{transition:background-color .2s,border-color .2s,color .2s,transform .15s}
+  .k-chip:active{transform:scale(.97)}
+  .k-tile{transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s cubic-bezier(.16,1,.3,1)}
+  .k-tile:hover{transform:translateY(-3px);box-shadow:0 16px 24px -10px rgba(20,40,75,.3)}
+  .k-btn,.k-tbtn{transition:background-color .2s,transform .12s}
+  .k-btn:active,.k-tbtn:active{transform:scale(.98)}
+  .k-note:not(:empty),.k-tnote:not(:empty),.k-st-note:not(:empty){animation:k-in .3s cubic-bezier(.16,1,.3,1)}
+  @keyframes k-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+}
+.k-summit{background:var(--navy);color:var(--on-navy);padding-block:clamp(64px,9vw,120px);margin-bottom:clamp(64px,9vw,120px)}
+.k-summit-in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:start}
+.k-summit h2{font:400 clamp(2.1rem,5vw,3.6rem)/1.05 var(--serif);letter-spacing:-.015em;margin:0 0 16px;text-wrap:balance}
+.k-summit .k-chip2{display:inline-block;font:500 .8rem var(--sans);background:rgba(255,255,255,.14);color:#e7edf6;padding:3px 10px;border-radius:99px;margin-bottom:16px}
+.k-summit .k-purpose{font:400 1.25rem/1.5 var(--serif);color:#d7e0f2;margin:0 0 28px;max-width:40ch}
+.k-summit dl{margin:0 0 32px;border-top:3px solid var(--gold)}
+.k-summit dl div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.k-summit dt{font-weight:600;font-size:.85rem;color:#b9c6dc;padding-top:2px}
+.k-summit dd{margin:0}
+.k-summit .k-actions{margin-bottom:0}
+#kim-events .k-summit .k-btn{background:#fff;color:var(--navy);border-color:#fff}
+#kim-events .k-summit .k-btn:hover{background:var(--mist)}
+#kim-events .k-summit .k-link{color:#fff}
+#kim-events .k-summit .k-link[aria-disabled="true"]{color:#b9c6dc}
+.k-summit .k-note:not(:empty){background:rgba(255,255,255,.14);color:#fff}
+.k-agenda h3{font:400 1.6rem/1.2 var(--serif);margin:0 0 20px}
+.k-day{margin-bottom:28px}
+.k-day h4{margin:0 0 8px;font:600 1rem var(--sans);color:#dcc888}
+.k-day ul{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.2)}
+.k-day li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 16px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.k-day .tm{font-variant-numeric:tabular-nums;color:#b9c6dc}
+.k-day .ti{font:400 1.15rem/1.3 var(--serif)}
+.k-day .ty{grid-column:2;font-size:.85rem;color:#b9c6dc}
+.k-speak{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,5vw,80px)}
+.k-speak p{margin:0;max-width:46ch;color:var(--muted)}
+.k-speak h3{font:400 1.4rem/1.2 var(--serif);margin:0 0 8px}
+.k-speak .k-actions{margin-top:20px}
+.k-faq{border-top:1px solid var(--rule);max-width:820px}
+.k-faq details{border-bottom:1px solid var(--rule)}
+.k-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0;font:400 1.25rem/1.3 var(--serif);min-height:56px}
+.k-faq summary::-webkit-details-marker{display:none}
+.k-faq summary::after{content:"+";font:400 1.6rem/1 var(--sans);color:var(--gold-ink);flex:none}
+.k-faq details[open] summary::after{content:"\2212"}
+.k-faq details p{margin:0 0 20px;max-width:60ch;color:var(--muted)}
+.k-faqhelp{margin:0;font-size:.95rem;color:var(--muted)}
+.k-credit{margin:10px 0 0;font-size:.8rem;color:var(--muted)}
+.k-band{border-top:4px solid var(--gold);background:var(--navy);color:var(--on-navy);padding-block:20px;font-size:.9rem}
+.k-band p{max-width:1240px;margin:0 auto}
+.k-band b{font-weight:600}
+.k-err{padding:24px;border:1px dashed var(--rule);color:var(--muted)}
+
+@media (max-width:820px){
+  .k-next-grid{grid-template-columns:minmax(0,1fr)}
+  .k-photo{aspect-ratio:4/3}
+  .k-facts div{grid-template-columns:80px minmax(0,1fr)}
+  .k-head nav{display:none}
+  .k-speak{grid-template-columns:minmax(0,1fr)}
+  .k-summit-in{grid-template-columns:minmax(0,1fr)}
+  .k-summit dl div{grid-template-columns:96px minmax(0,1fr)}
+  .k-why{grid-template-columns:minmax(0,1fr);gap:28px}
+  .k-strip{grid-template-columns:minmax(0,1fr)}
+  .k-strip .k-btn{width:100%}
+  .k-cue{display:none}
+  .k-tbtn{min-height:48px;padding-inline:20px}
+  .k-link{min-height:44px;display:inline-flex;align-items:center}
+  .k-chip{min-height:44px}
+  .k-count{margin-left:0;width:100%}
+}
+@media (prefers-reduced-motion:reduce){.k-art{animation:none}.k-cue i::after{animation:none;top:0}}
+</style>
+
+<div id="kim-events">
+
+  <main id="top">
+    <section class="k-hero" aria-label="Welcome">
+    <header class="k-head k-wrap">
+      <a class="k-mark" href="#top" aria-label="Kellogg Insurance, an Integrity company"><img class="k-logo k-logo-c" src="img/kellogg-logo.png" alt="Kellogg Insurance, an Integrity company" width="1000" height="268"><img class="k-logo k-logo-w" src="img/kellogg-logo.png" alt="" aria-hidden="true" width="1000" height="268"></a>
+      <nav aria-label="Primary"><a href="#next-up">Upcoming events</a></nav>
+    </header>
+      <div class="k-frame" id="kFrame">
+        <div class="k-zoomer" id="kZoom"><div class="k-art" data-slot="hero"></div></div>
+        <div class="k-scrim"></div>
+      </div>
+      <div class="k-copy k-wrap" id="kCopy">
+        <h1 class="k-h1" aria-label="Learn together. Grow together.">
+          <span class="k-line" aria-hidden="true"><span>Learn together.</span></span>
+          <span class="k-line" aria-hidden="true"><span>Grow together.</span></span>
+        </h1>
+        <p class="k-sub">Weekly online events, live and recorded trainings, WebCE courses and the annual Kellogg Business Summit, for independent agents.</p>
+        <div class="k-strip" id="kStrip" hidden></div>
+        <a class="k-cue" href="#next-up"><i aria-hidden="true"></i>See upcoming events</a>
+      </div>
+    </section>
+
+    <section class="k-next k-wrap" id="next-up" aria-labelledby="nextTitle">
+      <div class="k-next-grid" id="kNext" aria-live="polite">
+        <div class="k-err">Loading the next event.</div>
+      </div>
+    </section>
+    <section class="k-also k-wrap" aria-labelledby="alsoTitle" id="also" hidden>
+      <div class="k-also-inner">
+        <div><h2 id="alsoTitle">All upcoming events</h2><p class="k-lead">Filter by type or format. Dates, times and registration links are placeholders until confirmed.</p></div>
+        <div class="k-filters" id="kFilters"></div>
+        <ul class="k-tiles" id="kRows"></ul>
+      </div>
+    </section>
+    <section class="k-summit" id="summit" aria-labelledby="summitTitle" hidden>
+      <div class="k-summit-in k-wrap" id="kSummit"></div>
+    </section>
+
+    <section class="k-sec k-wrap" id="family" aria-labelledby="familyTitle">
+      <div class="k-sec-inner k-family">
+        <h2 id="familyTitle">Kellogg treats agents like family.</h2>
+        <p>Founder Ron Kellogg started his agency in 1980 around recruiting agents and treating them like family. That still shapes the training, tools and support behind every session.</p>
+      </div>
+    </section>
+
+    <section class="k-sec k-wrap" id="hosts" aria-labelledby="hostsTitle" hidden>
+      <div class="k-sec-inner">
+        <h2 id="hostsTitle">Who you will learn with</h2>
+        <ul class="k-hosts" id="kHosts"></ul>
+      </div>
+    </section>
+
+    <section class="k-sec k-wrap" id="why" aria-labelledby="whyTitle">
+      <div class="k-sec-inner">
+        <h2 id="whyTitle">Why agents show up</h2>
+        <p class="k-lead2">These events are part of how Kellogg supports independent agents today.</p>
+        <div class="k-why">
+          <div><h3>Training</h3><p>Live and recorded sessions, weekly online events, discounted WebCE courses open to everyone, and the annual Kellogg Business Summit.</p></div>
+          <div><h3>Tools</h3><p>A CRM for agents, a quoting platform and online enrollment tools, so what you learn in a session you can use the same day.</p></div>
+          <div><h3>Support</h3><p>Contracting and compliance support, plus back-office help through Integrity, so you can focus on serving clients.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="k-sec k-wrap" id="speak" aria-labelledby="speakTitle" hidden>
+      <div class="k-sec-inner k-speak" id="kSpeak"></div>
+    </section>
+
+    <section class="k-sec k-wrap" id="faq" aria-labelledby="faqTitle" hidden>
+      <div class="k-sec-inner">
+        <h2 id="faqTitle">Questions</h2>
+        <div class="k-faq" id="kFaq"></div>
+        <p class="k-faqhelp">Still have a question? Call Kellogg at (801) 816-0505 or visit kelloggins.com.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="k-band k-wrap"><p><b>Phase 1 preview. Pending compliance review.</b> All event details and photos are placeholders. The banner image is AI-generated (Google Gemini) and is not a photo of Kellogg staff or an event. This page needs compliance approval before it is published.</p></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function(){
+  var root=document.getElementById("kim-events");
+  var calm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var IMG={};
+
+  function isPlaceholder(v){return !v||/^\s*\[/.test(v)}
+  function el(tag,cls,txt){var n=document.createElement(tag);if(cls)n.className=cls;if(txt!=null)n.textContent=txt;return n}
+
+  /* Photos: built from images.json, with responsive sizes and a gradient fallback */
+  function paint(node,slot){
+    var cfg=IMG[slot];if(!cfg){return}
+    node.style.setProperty("--g",cfg.fallback||"#14284b");
+    node.style.setProperty("--focal",cfg.focal||"50% 50%");
+    if(cfg.src){
+      var im=new Image();im.alt=cfg.alt||"";im.decoding="async";im.loading=slot==="hero"?"eager":"lazy";im.src=cfg.src;
+      im.onerror=function(){im.remove();node.classList.add("is-fallback")};node.appendChild(im);return;
+    }
+    if(!cfg.url){node.classList.add("is-fallback");return}
+    var base=cfg.url.split("?")[0],widths=[640,960,1280,1600,2200];
+    var img=new Image();
+    img.alt=cfg.alt||"";img.decoding="async";img.loading=slot==="hero"?"eager":"lazy";
+    img.srcset=widths.map(function(w){return base+"?auto=format&fit=crop&q=70&w="+w+" "+w+"w"}).join(", ");
+    img.sizes=slot==="hero"?"100vw":"(max-width:820px) 100vw, 48vw";
+    img.src=base+"?auto=format&fit=crop&q=70&w=1280";
+    img.onerror=function(){img.remove();node.classList.add("is-fallback")};
+    node.appendChild(img);
+  }
+
+  /* Time: visitor's local time first, original time zone beside it */
+  function fmtDate(d,tz){return new Intl.DateTimeFormat(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric",timeZone:tz}).format(d)}
+  function fmtTime(d,tz){return new Intl.DateTimeFormat(undefined,{hour:"numeric",minute:"2-digit",timeZoneName:"short",timeZone:tz}).format(d)}
+  function icsStamp(d){return d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"")}
+
+  function fact(dl,k,v,sub){
+    var row=el("div"),dt=el("dt","",k),dd=el("dd","",v);
+    if(sub){dd.appendChild(el("small","",sub))}
+    row.appendChild(dt);row.appendChild(dd);dl.appendChild(row);
+  }
+
+  function replayText(e){return e.replay===true?"Replay available afterward":(e.replay===false?"Live only, no replay":"[CONFIRM REPLAY]")}
+  function lengthText(e){
+    if(e.placeholder||!e.endDateTime)return "[LENGTH]";
+    var m=Math.round((new Date(e.endDateTime)-new Date(e.startDateTime))/60000);
+    return m>=60?(Math.floor(m/60)+" hr"+(m%60?" "+(m%60)+" min":"")):(m+" min");
+  }
+  function renderStrip(e){
+    var box=document.getElementById("kStrip");if(!box)return;box.textContent="";
+    box.appendChild(el("span","k-st-label","Next up"));
+    var left=el("div");left.appendChild(el("p","k-st-title",e.title));
+    var when;
+    if(e.placeholder){when="[DATE] · [TIME] [TIME ZONE]"}
+    else{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone,st=new Date(e.startDateTime);when=new Intl.DateTimeFormat(undefined,{weekday:"short",month:"short",day:"numeric",timeZone:tz}).format(st)+" · "+fmtTime(st,tz)}
+    left.appendChild(el("p","k-st-when",when));box.appendChild(left);
+    var note=el("p","k-st-note","");note.setAttribute("role","status");
+    var btn;
+    if(isPlaceholder(e.registrationUrl)){
+      btn=el("button","k-btn","Reserve your spot");btn.type="button";
+      btn.addEventListener("click",function(){note.textContent="Registration opens here once the link is confirmed. [REGISTRATION LINK] is still a placeholder."});
+    }else{btn=el("a","k-btn","Reserve your spot");btn.href=e.registrationUrl;btn.target="_blank";btn.rel="noopener"}
+    box.appendChild(btn);box.appendChild(note);box.hidden=false;
+  }
+
+  function pickNext(list){
+    var now=Date.now();
+    var real=list.filter(function(e){return !e.placeholder&&new Date(e.startDateTime).getTime()>=now})
+      .sort(function(a,b){return new Date(a.startDateTime)-new Date(b.startDateTime)});
+    return real[0]||list[0];
+  }
+
+  function renderNext(e){
+    var box=document.getElementById("kNext");box.textContent="";
+    var ph=!!e.placeholder;
+    var left=el("div"),right=el("div");
+
+    var label=el("p","k-label","");label.appendChild(icon(e.type,"k-ico"));label.appendChild(document.createTextNode("Next up"));
+    if(ph)label.appendChild(el("span","k-chip","Placeholder event"));
+    var h=el("h2","",e.title);h.id="nextTitle";
+    left.appendChild(label);left.appendChild(h);
+    left.appendChild(el("p","k-summary",e.summary));
+
+    var dl=el("dl","k-facts"),start=new Date(e.startDateTime),end=e.endDateTime?new Date(e.endDateTime):null;
+    var userTz=Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if(ph){
+      fact(dl,"Date","[DATE]");
+      fact(dl,"Time","[TIME] [TIME ZONE]","Shown in your local time, with the original time zone beside it, once confirmed.");
+    }else{
+      fact(dl,"Date",fmtDate(start,userTz));
+      var mine=fmtTime(start,userTz),orig=fmtTime(start,e.timeZone);
+      fact(dl,"Time",mine+" (your time)",mine===orig?"":orig+" (event time)");
+    }
+    fact(dl,"Format",e.format==="in person"?"In person":"Online",isPlaceholder(e.location)?"":e.location);
+    fact(dl,"Length",lengthText(e));
+    fact(dl,"Replay",replayText(e));
+    fact(dl,"Cost",e.cost);
+    if(e.hosts&&e.hosts.length)fact(dl,"Hosted by",e.hosts.join(", "));
+    left.appendChild(dl);
+
+    var act=el("div","k-actions");
+    var reserve=el("a","k-btn","Reserve your spot");
+    var note=el("p","k-note","");note.id="kNote";note.setAttribute("role","status");
+    if(isPlaceholder(e.registrationUrl)){
+      reserve.href="#next-up";
+      reserve.addEventListener("click",function(ev){ev.preventDefault();note.textContent="Registration opens here once the link is confirmed. [REGISTRATION LINK] is still a placeholder."});
+    }else{reserve.href=e.registrationUrl;reserve.target="_blank";reserve.rel="noopener"}
+    act.appendChild(reserve);
+
+    var g=el("a","k-link","Add to Google Calendar"),ics=el("button","k-link","Download .ics file");ics.type="button";
+    if(ph||!end){
+      [g,ics].forEach(function(n){n.setAttribute("aria-disabled","true");n.title="Available once the event date is confirmed"});
+      g.removeAttribute("href");g.setAttribute("role","link");
+      ics.addEventListener("click",function(){note.textContent="Calendar files are available once the event date and time are confirmed."});
+      g.addEventListener("click",function(ev){ev.preventDefault();note.textContent="Calendar links are available once the event date and time are confirmed."});
+    }else{
+      g.href="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(e.title)+"&dates="+icsStamp(start)+"/"+icsStamp(end)+"&details="+encodeURIComponent(e.summary)+"&location="+encodeURIComponent(isPlaceholder(e.location)?"Online":e.location);
+      g.target="_blank";g.rel="noopener";
+      ics.addEventListener("click",function(){
+        var body=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Kellogg Insurance Marketing//Events//EN","BEGIN:VEVENT","UID:"+icsStamp(start)+"@kelloggins.com","DTSTAMP:"+icsStamp(new Date()),"DTSTART:"+icsStamp(start),"DTEND:"+icsStamp(end),"SUMMARY:"+e.title.replace(/[,;]/g,"\\$&"),"DESCRIPTION:"+e.summary.replace(/[,;]/g,"\\$&"),"END:VEVENT","END:VCALENDAR"].join("\r\n");
+        var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([body],{type:"text/calendar"}));a.download="kellogg-event.ics";document.body.appendChild(a);a.click();a.remove();
+      });
+    }
+    act.appendChild(g);act.appendChild(ics);
+    left.appendChild(act);left.appendChild(note);
+
+    var photo=el("div","k-photo");photo.id="kPhoto";
+    right.appendChild(photo);paint(photo,e.image);
+    var cfg=IMG[e.image];
+    if(cfg&&cfg.url)right.appendChild(el("p","k-credit","Photo: "+cfg.photographer+" on Unsplash"));
+    else if(cfg&&cfg.aiGenerated)right.appendChild(el("p","k-credit","Placeholder image, AI-generated. Not Kellogg staff."));
+    box.appendChild(left);box.appendChild(right);
+  }
+
+  var TYPES={"weekly-online":"Weekly online event","live-training":"Live training","recorded-training":"Recorded training","webce":"WebCE course","business-summit":"Business Summit","recruiting":"Recruiting session"};
+  var NS="http://www.w3.org/2000/svg";
+  var ICONS={
+    "weekly-online":'<rect x="5" y="8" width="26" height="23" rx="3"/><path d="M5 15h26M11 5v6M25 5v6"/><path class="gf" d="M18 18.5l1.6 3.3 3.6.5-2.6 2.5.6 3.6-3.2-1.7-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z" transform="scale(.96) translate(.7 .5)"/>',
+    "live-training":'<rect x="7" y="7" width="22" height="26" rx="3"/><rect x="13" y="4" width="10" height="6" rx="1.5"/><path class="g" d="M12 21l4 4 8-8"/>',
+    "recorded-training":'<path d="M4 11a2 2 0 0 1 2-2h8l3 3h13a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path class="gf" d="M18 17l1.5 3 3.3.5-2.4 2.3.6 3.3-3-1.6-3 1.6.6-3.3-2.4-2.3 3.3-.5z"/>',
+    "webce":'<rect x="5" y="6" width="26" height="18" rx="2"/><path d="M12 31h12M18 24v7"/><path class="g" d="M12 15l4 4 8-8"/>',
+    "business-summit":'<path d="M3 31l10-14 5 7 4-5 11 12z"/><path d="M13 17V5"/><path class="g" d="M13 5h7l-2 3 2 3h-7"/>',
+    "recruiting":'<rect x="4" y="12" width="28" height="19" rx="2.5"/><path d="M13 12V8a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"/><path class="g" d="M4 21h28"/><rect class="gf" x="16" y="19" width="4" height="4" rx=".8"/>'
+  };
+  function icon(type,cls){var s=document.createElementNS(NS,"svg");s.setAttribute("viewBox","0 0 36 36");s.setAttribute("class",cls||"k-ico");s.setAttribute("aria-hidden","true");s.innerHTML=ICONS[type]||ICONS["weekly-online"];return s}
+
+  var ALLEV=[],F={type:"all",format:"all"},firstDraw=true;
+  var FORMATS=[["all","Any format"],["online","Online"],["in person","In person"]];
+
+  function chip(label,pressed,fn){
+    var b=el("button","k-chip",label);b.type="button";b.setAttribute("aria-pressed",String(pressed));b.addEventListener("click",fn);return b;
+  }
+  var chipsBuilt=false;
+  function renderFilters(){
+    var box=document.getElementById("kFilters");
+    if(!chipsBuilt){
+      box.textContent="";
+      var types=[];ALLEV.forEach(function(e){if(types.indexOf(e.type)<0)types.push(e.type)});
+      var g1=el("div","k-fgroup");g1.setAttribute("role","group");g1.setAttribute("aria-label","Event type");
+      function mk(group,key,val,label){
+        var b=el("button","k-chip",label);b.type="button";b.dataset.key=key;b.dataset.val=val;
+        b.addEventListener("click",function(){F[key]=val;update()});group.appendChild(b);
+      }
+      mk(g1,"type","all","All events");
+      types.forEach(function(t){mk(g1,"type",t,TYPES[t]||t)});
+      var g2=el("div","k-fgroup");g2.setAttribute("role","group");g2.setAttribute("aria-label","Format");
+      FORMATS.forEach(function(f){mk(g2,"format",f[0],f[1])});
+      box.appendChild(g1);box.appendChild(g2);
+      var c=el("p","k-count","");c.id="kCount";c.setAttribute("role","status");box.appendChild(c);
+      chipsBuilt=true;
+    }
+    Array.prototype.forEach.call(box.querySelectorAll(".k-chip"),function(b){b.setAttribute("aria-pressed",String(F[b.dataset.key]===b.dataset.val))});
+  }
+  function update(){renderFilters();drawTiles()}
+
+  function drawTiles(){
+    var sec=document.getElementById("also"),ul=document.getElementById("kRows");
+    var list=ALLEV.filter(function(e){return (F.type==="all"||e.type===F.type)&&(F.format==="all"||e.format===F.format)});
+    ul.textContent="";
+    document.getElementById("kCount").textContent=list.length+" event"+(list.length===1?"":"s");
+    if(!list.length){ul.appendChild(el("li","k-empty","No sessions match these filters. Choose All events or Any format to see every session."));return}
+    var userTz=Intl.DateTimeFormat().resolvedOptions().timeZone;
+    list.forEach(function(e){
+      var li=el("li","k-tile"),th=el("div","k-th");
+      th.appendChild(icon(e.type));th.appendChild(el("h3","",e.title));
+      var meta=el("div","k-tmeta"),when=el("span","");
+      if(e.placeholder){var b=el("b","","[DATE]");when.appendChild(b);when.appendChild(document.createTextNode(" · [TIME] [TIME ZONE]"))}
+      else{var s0=new Date(e.startDateTime);var b2=el("b","",new Intl.DateTimeFormat(undefined,{weekday:"short",month:"short",day:"numeric",timeZone:userTz}).format(s0));when.appendChild(b2);when.appendChild(document.createTextNode(" · "+fmtTime(s0,userTz)))}
+      meta.appendChild(when);
+      meta.appendChild(el("span","",(e.format==="in person"?"In person":"Online")+(isPlaceholder(e.location)?"":" · "+e.location)));
+      var foot=el("div","k-tfoot"),tn=el("p","k-tnote","");tn.setAttribute("role","status");foot.appendChild(el("span","k-ttype",TYPES[e.type]||e.type));
+      var btn;
+      if(isPlaceholder(e.registrationUrl)){
+        btn=el("button","k-tbtn","Reserve your spot");btn.type="button";
+        btn.addEventListener("click",function(){tn.textContent="Registration opens here once the link is confirmed. [REGISTRATION LINK] is still a placeholder.";btn.setAttribute("aria-expanded","true")});
+      }else{btn=el("a","k-tbtn","Reserve your spot");btn.href=e.registrationUrl;btn.target="_blank";btn.rel="noopener"}
+      foot.appendChild(btn);
+      li.appendChild(th);li.appendChild(meta);li.appendChild(foot);li.appendChild(tn);ul.appendChild(li);
+    });
+    sec.hidden=false;
+    if(window.gsap&&!calm&&!firstDraw){gsap.from(".k-tile",{y:18,opacity:0,duration:.45,ease:"power3.out",stagger:.05,clearProps:"transform,opacity"})}
+    firstDraw=false;
+  }
+  function renderHosts(list){
+    var sec=document.getElementById("hosts"),ul=document.getElementById("kHosts");ul.textContent="";
+    if(!list||!list.length)return;
+    list.forEach(function(h){
+      var li=el("li","k-host"),av=el("div","k-avatar");av.setAttribute("aria-hidden","true");
+      if(h.photo){var im=new Image();im.alt="";im.src=h.photo;av.appendChild(im)}
+      else{var sv=document.createElementNS(NS,"svg");sv.setAttribute("viewBox","0 0 36 36");sv.innerHTML='<circle cx="18" cy="13" r="6"/><path d="M6 31c1-7 6-10 12-10s11 3 12 10"/>';av.appendChild(sv)}
+      li.appendChild(av);li.appendChild(el("b","",h.name));li.appendChild(el("span","t",h.title));
+      if(h.topic)li.appendChild(el("p","",h.topic));
+      ul.appendChild(li);
+    });
+    sec.hidden=false;
+  }
+  function renderSummit(sm){
+    var sec=document.getElementById("summit"),box=document.getElementById("kSummit");
+    if(!sm||!sec)return;box.textContent="";
+    var left=el("div"),right=el("div","k-agenda");
+    if(sm.placeholder)left.appendChild(el("span","k-chip2","Placeholder details"));
+    var h=el("h2","",sm.title);h.id="summitTitle";left.appendChild(h);
+    left.appendChild(el("p","k-purpose",sm.purpose));
+    var dl=el("dl");
+    [["Dates",sm.dates],["Where",sm.venue],["Who should attend",sm.audience],["Cost",sm.cost]].forEach(function(r){
+      var row=el("div");row.appendChild(el("dt","",r[0]));row.appendChild(el("dd","",r[1]));dl.appendChild(row)});
+    left.appendChild(dl);
+    var act=el("div","k-actions"),note=el("p","k-note","");note.setAttribute("role","status");
+    var reserve;
+    if(isPlaceholder(sm.registrationUrl)){
+      reserve=el("button","k-btn","Reserve your spot");reserve.type="button";
+      reserve.addEventListener("click",function(){note.textContent="Registration opens here once the link is confirmed. [REGISTRATION LINK] is still a placeholder."});
+    }else{reserve=el("a","k-btn","Reserve your spot");reserve.href=sm.registrationUrl;reserve.target="_blank";reserve.rel="noopener"}
+    var cal=el("button","k-link","Add to calendar");cal.type="button";cal.setAttribute("aria-disabled","true");cal.title="Available once the dates are confirmed";
+    cal.addEventListener("click",function(){note.textContent="Calendar links are available once the dates and times are confirmed."});
+    act.appendChild(reserve);act.appendChild(cal);left.appendChild(act);left.appendChild(note);
+    right.appendChild(el("h3","","Agenda"));
+    (sm.days||[]).forEach(function(day){
+      var wrap=el("div","k-day");wrap.appendChild(el("h4","",day.label+(day.date?" · "+day.date:"")));
+      var ul=el("ul");
+      (day.sessions||[]).forEach(function(x){
+        var li=el("li");li.appendChild(el("span","tm",x.time));li.appendChild(el("span","ti",x.title));
+        if(x.type)li.appendChild(el("span","ty",x.type));ul.appendChild(li)});
+      wrap.appendChild(ul);right.appendChild(wrap);
+    });
+    box.appendChild(left);box.appendChild(right);sec.hidden=false;
+  }
+  function renderSpeak(c){
+    var sec=document.getElementById("speak"),box=document.getElementById("kSpeak");
+    if(!c||!sec)return;box.textContent="";
+    var l=el("div"),r=el("div");
+    var h=el("h2","",c.title);h.id="speakTitle";l.appendChild(h);
+    l.appendChild(el("p","",c.body));
+    var act=el("div","k-actions"),note=el("p","k-note","");note.setAttribute("role","status");
+    var b;
+    if(isPlaceholder(c.ctaUrl)){b=el("button","k-btn",c.ctaLabel);b.type="button";
+      b.addEventListener("click",function(){note.textContent="The proposal form opens here once the link is confirmed. [SPEAKER FORM LINK] is still a placeholder."})}
+    else{b=el("a","k-btn",c.ctaLabel);b.href=c.ctaUrl;b.target="_blank";b.rel="noopener"}
+    act.appendChild(b);l.appendChild(act);l.appendChild(note);
+    r.appendChild(el("h3","",c.partnerTitle));r.appendChild(el("p","",c.partnerBody));
+    box.appendChild(l);box.appendChild(r);sec.hidden=false;
+  }
+  function renderFaq(list){
+    var sec=document.getElementById("faq"),box=document.getElementById("kFaq");
+    if(!list||!list.length||!sec)return;box.textContent="";
+    list.forEach(function(x){
+      var d=el("details"),sm=el("summary","",x.q);d.appendChild(sm);d.appendChild(el("p","",x.a));box.appendChild(d)});
+    sec.hidden=false;
+  }
+  function initCalendar(list){ALLEV=list;renderFilters();drawTiles()}
+
+  /* Motion: one calm arrival on load. After that, movement only answers a click or hover. */
+  function motion(){
+    if(!window.gsap||calm)return;
+    gsap.from(root.querySelectorAll(".k-line>span"),{yPercent:110,duration:1.1,ease:"expo.out",stagger:.12,delay:.1});
+    gsap.from(".k-sub,.k-strip,.k-cue",{opacity:0,y:16,duration:.9,ease:"power3.out",delay:.6,stagger:.1});
+    gsap.from("#kZoom",{filter:"blur(10px)",scale:1.05,duration:1.4,ease:"expo.out",clearProps:"filter,transform"});
+  }
+
+  Promise.all([
+    fetch("images.json").then(function(r){return r.json()}),
+    fetch("events.json").then(function(r){return r.json()})
+  ]).then(function(res){
+    IMG=res[0].images||{};
+    paint(root.querySelector('[data-slot="hero"]'),"hero");
+    var list=res[1].events||[];
+    if(!list.length)throw new Error("no events");
+    var next=pickNext(list);
+    renderNext(next);
+    renderStrip(next);
+    initCalendar(list);
+    renderHosts(res[1].hosts);
+    renderSummit(res[1].summit);
+    renderSpeak(res[1].speakersCall);
+    renderFaq(res[1].faq);
+  }).catch(function(){
+    paint(root.querySelector('[data-slot="hero"]'),"hero");
+    document.getElementById("kNext").textContent="";
+    var m=el("div","k-err","Upcoming events could not load. Please refresh the page.");
+    document.getElementById("kNext").appendChild(m);
+  }).then(motion);
+})();
+</script>

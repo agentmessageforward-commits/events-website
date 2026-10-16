@@ -1,0 +1,29 @@
+{
+  "_readme": "Every photo on the site is set here. To swap an image, change its url (an Unsplash photo URL, without size parameters), alt, photographer and link. The page builds responsive sizes from url. Leave url empty and the page shows its gradient fallback. Unsplash photos are stand-ins until Kellogg supplies its own photography. Do not present stock images as Kellogg events, staff or attendees. Avoid Medicare cards, government buildings or seals, and recognizable third-party logos. To use your own file instead, publish it next to this page and set src (for example img/webinar.jpg); src takes priority over url.",
+  "images": {
+    "hero": {
+      "url": "",
+      "alt": "A laptop on a wooden desk in a bright room, showing an online training session with a presenter and a slide, beside a cup of coffee, a notebook and a potted plant.",
+      "photographer": "AI-generated with Google Gemini (no photographer)",
+      "link": "",
+      "brief": "Online webinar: a presenter on a video call, a laptop on a desk with a live session, or a bright home or office set-up. Wide, uncluttered, with calm space on the left for the headline.",
+      "focal": "72% 50%",
+      "fallback": "linear-gradient(115deg,#0d1b36 0%,#14284b 45%,#2c4f82 100%)",
+      "src": "img/hero.jpg",
+      "note": "Supplied by the client. Created with Google Gemini (AI image generator), so there is no photographer and no Unsplash-style license. The presenter is not a real Kellogg employee and the on-screen text is not real. Confirm Google's current terms allow this commercial use, and get compliance sign-off on using an AI-generated image, before launch. Replace with a real Kellogg webinar photo when available.",
+      "aiGenerated": true
+    },
+    "nextup": {
+      "url": "",
+      "alt": "Two colleagues smiling and talking at a table with a laptop, a notebook and coffee mugs in a bright office.",
+      "photographer": "AI-generated (no photographer)",
+      "link": "",
+      "brief": "Portrait or square. Warm, natural conversation or a small workshop. No faces paired with quotes.",
+      "focal": "52% 40%",
+      "fallback": "linear-gradient(160deg,#2c4f82 0%,#6f95c4 60%,#c9daee 100%)",
+      "src": "img/nextup.jpg",
+      "aiGenerated": true,
+      "note": "Supplied by the client as an AI-generated image. The people are not real Kellogg staff. A small crest on one mug should be checked or removed so it cannot be read as a seal or a third-party logo. Confirm the generator's terms allow commercial use and get compliance sign-off before launch."
+    }
+  }
+}
